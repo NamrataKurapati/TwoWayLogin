@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.com">
+<head>
+<meta charset="ISO-8859-1">
+<title>User Login</title>
+<link 
+rel="stylesheet" 
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
+integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" 
+crossorigin="anonymous">
+
+<style type="text/css">
+	label{
+			display: inline-block;
+			width: 200px;
+			margin: 5px;
+			text-align: left;		
+	}
+	button{
+			margin: 10px;
+			padding: 10px;
+	}
+</style>
+</head>
+<body>
+	<div align="center">
+	<h1>User Login</h1>
+	<div class="card" style="width:50%;">
+	<div class="card-body">
+	<form action="#" th:action="@{/login}" th:object="${user}" method="post">
+			<label>Full Name:</label>
+			<input type="text" th:field="*{name}" /><br/>
+			
+			<label>Email:</label>
+			<input type="text" th:field="*{email}" /><br/>
+			
+			<label>Password:</label>
+			<input type="password" th:field="*{password}" /><br/>
+			
+			<button class="btn btn-info" type="submit">Send OTP</button>
+	</form>
+	</div>
+	</div>
+	
+	</div>
+
+</body>
+</html>
