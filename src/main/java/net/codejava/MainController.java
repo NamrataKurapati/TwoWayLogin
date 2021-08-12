@@ -32,7 +32,7 @@ public class MainController {
 			System.out.println(user);
 			EmailSenderService service = new EmailSenderService();
 			
-			String otp= new DecimalFormat("000000").format(new Random().nextInt(999999));
+			String otp= new DecimalFormat("0000").format(new Random().nextInt(9999));
 			System.out.println(otp);		
 			
 			name = user.getName();
